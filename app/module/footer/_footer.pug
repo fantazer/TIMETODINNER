@@ -1,0 +1,29 @@
+mixin footer()
+	//block footer
+	.footer
+		.main-cont
+			.footer-wrap
+				.footer-time
+					.footer-time__title Время обедать, 2018
+					a(href="#").footer-time__text Политика конфеденциальности
+				.footer-nav
+					-
+						var items = [
+							'Меню',
+							'Комплексные обеды',
+							'Доставка и оплата',
+							'Отзывы',
+							'О нас',
+							'Вакансии',
+							'Контакты'
+							];
+					each item in items
+						a(href="#").footer-el #{item}
+				.footer-contact
+					a(href="mailto:malinalanch@mail.ru").footer-contact__mail malinalanch@mail.ru
+					a(href="tel:+7 495 741-19-24").footer-contact__phone +7 495 741-19-24
+					.footer-contact__callback.btn--light.btn--md-fix
+						.btn--icon
+							+icon("mail","nav-icon")
+							span Обратная связь
+//block footer end

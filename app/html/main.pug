@@ -1,0 +1,109 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.slider-main
+	.main-cont
+		.slider-wrap
+			.slider-main__head
+				.slider-main__title Наше меню
+				.slider-control-wrap
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+			.slider-item
+				- for (var i=1;i<9;i++)
+
+					a(href="/").slider-main__el
+						.slider-main__el-wrap
+							.slider-main__el-img
+								img(src="img/item-dinner-"+i+".png", alt="")
+							.slider-main__el-title Первые блюда
+
+.content-gray
+	.main-cont
+		.section-list
+			.section-list__head
+				.section-list__title Комплексные обеды
+				a(href="#").section-list__more Смотреть все
+			.section-list__cont
+				- for (var i=0;i<3;i++)
+					.section-list__el
+						.section-list__el-img-wrap
+							a(href="#")
+								.section-list__el-img(style="background-image:url('img/item-card.png')")
+							a(href="#").section-list__el-title Обед с домашним пирожком
+						.section-list__el-content
+							.section-list__el-text Свекла с чесноком и майонезом, Суп Деликатесный (курица, картофель, лук, морковь, омлет), Ватрушка мясная с жульеном + гречка отварная, Плюшка Московская
+							.section-list__el-footer
+								.section-list__el-price 890 Р
+								.section-list__el-get Добавить
+		.section-list
+			.section-list__head
+				.section-list__title Вторые блюда
+				a(href="#").section-list__more Смотреть все
+			.section-list__cont
+				- for (var i=0;i<3;i++)
+					.section-list__el
+						.section-list__el-img-wrap
+							a(href="#")
+								.section-list__el-img(style="background-image:url('img/item-card.png')")
+							a(href="#").section-list__el-title Обед с домашним пирожком
+						.section-list__el-content
+							.section-list__el-text Свекла с чесноком и майонезом, Суп Деликатесный (курица, картофель, лук, морковь, омлет), Ватрушка мясная с жульеном + гречка отварная, Плюшка Московская
+							.section-list__el-footer
+								.section-list__el-price 890 Р
+								.section-list__el-get Добавить
+		.section-adv
+			.section-adv__el
+				.section-adv__el-icon
+					+icon("card","icon")
+				.section-adv__el-title Удобно
+				.section-adv__el-text Вы можете оплатить заказ наличными или картой онлайн
+
+			.section-adv__el
+				.section-adv__el-icon
+					+icon("roket","icon")
+				.section-adv__el-title Быстро
+				.section-adv__el-text У нас своя служба доставки, поэтому мы доставим Вам питание всегда вовремя и в удобное для Вас время
+
+			.section-adv__el
+				.section-adv__el-icon
+					+icon("present","icon")
+				.section-adv__el-title Бесплатно
+				.section-adv__el-text Доставка осуществляется по всей Москве и совершенно бесплатно
+
+			.section-adv__el
+				.section-adv__el-icon
+					+icon("reward","icon")
+				.section-adv__el-title Качественно
+				.section-adv__el-text Все наши блюда соответствуют нормам САНПин и полностью сертифицированы
+
+		.section-list
+			.section-list__head
+				.section-list__title Салаты
+				a(href="#").section-list__more Смотреть все
+			.section-list__cont
+				- for (var i=0;i<3;i++)
+					.section-list__el
+						.section-list__el-img-wrap
+							a(href="#")
+								.section-list__el-img(style="background-image:url('img/item-card.png')")
+							a(href="#").section-list__el-title Обед с домашним пирожком
+						.section-list__el-content
+							.section-list__el-text Свекла с чесноком и майонезом, Суп Деликатесный (курица, картофель, лук, морковь, омлет), Ватрушка мясная с жульеном + гречка отварная, Плюшка Московская
+							.section-list__el-footer
+								.section-list__el-price 890 Р
+								.section-list__el-get Добавить
+
+.main-cont
+	.footer-banner
+		.footer-banner-img
+			img(src="img/banner-food.jpg", alt="")
+		.footer-banner-cont
+			.footer-banner-title Время обедать
+			.footer-banner-text – это качественное и недорогое питание с доставкой в Ваш офис. Мы предлагаем вкусное сбалансированное меню, используем только свежие и полезные продукты для приготовления каждого блюда. Заказывая доставку комплексных обедов в офис, Вы можете быть спокойны за сроки ее выполнения: мы обязательно приедем вовремя! Питательные первые и вторые блюда, свежие овощные салаты, горячие шашлыки на мангале, аппетитная пицца,полезный компот и многое-многое другое!
+
++footer()
+include ./block_html/_script.pug

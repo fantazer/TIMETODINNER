@@ -1,0 +1,45 @@
+mixin header()
+	//block header
+	.header
+		.main-cont
+			.header-top
+				a(href="/").logo
+					img(src="img/main-logo.png", alt="")
+				.header-contact
+					a(href="tel:+7 495 741-19-24").header-phone +7 495
+						span 741-19-24
+					.header-callback.btn--light.btn--md-fix
+						.btn--icon
+							+icon("phone","nav-icon")
+							span Перезвоните мне
+				.header-soc
+					a(href="#").header-soc__el
+						+icon("soc-vk","icon")
+					a(href="#").header-soc__el
+						+icon("soc-facebook","icon")
+					a(href="#").header-soc__el
+						+icon("soc-twitter","icon")
+				.header-get-menu.btn--light.btn--md-fix
+					.btn--icon
+						+icon("pdf","nav-icon")
+						span Скачать меню
+		.header-nav-wrap
+			.main-cont
+				.header-nav
+					.header-menu
+						-
+							var items = [
+								'Меню ',
+								'Комплексные обеды ',
+								'Доставка и оплата',
+								'Отзывы ',
+								'О нас ',
+								'Контакты'
+								];
+						each item in items
+							a(href="#").header-menu__el #{item}
+					a(href="/").header-basket
+						.header-basket__icon
+							+icon("basket","icon")
+						.header-basket__val (3) 2 500 руб.
+	//block header end
