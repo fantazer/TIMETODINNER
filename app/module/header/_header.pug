@@ -12,6 +12,11 @@ mixin header()
 						.btn--icon
 							+icon("phone","nav-icon")
 							span Перезвоните мне
+				.header-mobile__toggle
+					.header-mobile__toggle-menu
+						+icon("menu","icon")
+					a(href="#").header-mobile__toggle-cart
+						+icon("basket","icon")
 				.header-soc
 					a(href="#").header-soc__el
 						+icon("soc-vk","icon")

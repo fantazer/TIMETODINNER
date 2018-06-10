@@ -31,7 +31,7 @@ include block_html/_include.pug
 				- for (var i=0;i<3;i++)
 					.section-list__el
 						.section-list__el-img-wrap
-							a(href="#")
+							a(href="#").section-list__el-link
 								.section-list__el-img(style="background-image:url('img/item-card.png')")
 							a(href="#").section-list__el-title Обед с домашним пирожком
 						.section-list__el-content
@@ -47,7 +47,7 @@ include block_html/_include.pug
 				- for (var i=0;i<3;i++)
 					.section-list__el
 						.section-list__el-img-wrap
-							a(href="#")
+							a(href="#").section-list__el-link
 								.section-list__el-img(style="background-image:url('img/item-card.png')")
 							a(href="#").section-list__el-title Обед с домашним пирожком
 						.section-list__el-content
@@ -59,26 +59,30 @@ include block_html/_include.pug
 			.section-adv__el
 				.section-adv__el-icon
 					+icon("card","icon")
-				.section-adv__el-title Удобно
-				.section-adv__el-text Вы можете оплатить заказ наличными или картой онлайн
+				.section-adv__el-wrap
+					.section-adv__el-title Удобно
+					.section-adv__el-text Вы можете оплатить заказ наличными или картой онлайн
 
 			.section-adv__el
 				.section-adv__el-icon
 					+icon("roket","icon")
-				.section-adv__el-title Быстро
-				.section-adv__el-text У нас своя служба доставки, поэтому мы доставим Вам питание всегда вовремя и в удобное для Вас время
+				.section-adv__el-wrap
+					.section-adv__el-title Быстро
+					.section-adv__el-text У нас своя служба доставки, поэтому мы доставим Вам питание всегда вовремя и в удобное для Вас время
 
 			.section-adv__el
 				.section-adv__el-icon
 					+icon("present","icon")
-				.section-adv__el-title Бесплатно
-				.section-adv__el-text Доставка осуществляется по всей Москве и совершенно бесплатно
+				.section-adv__el-wrap
+					.section-adv__el-title Бесплатно
+					.section-adv__el-text Доставка осуществляется по всей Москве и совершенно бесплатно
 
 			.section-adv__el
 				.section-adv__el-icon
 					+icon("reward","icon")
-				.section-adv__el-title Качественно
-				.section-adv__el-text Все наши блюда соответствуют нормам САНПин и полностью сертифицированы
+				.section-adv__el-wrap
+					.section-adv__el-title Качественно
+					.section-adv__el-text Все наши блюда соответствуют нормам САНПин и полностью сертифицированы
 
 		.section-list
 			.section-list__head
@@ -88,7 +92,7 @@ include block_html/_include.pug
 				- for (var i=0;i<3;i++)
 					.section-list__el
 						.section-list__el-img-wrap
-							a(href="#")
+							a(href="#").section-list__el-link
 								.section-list__el-img(style="background-image:url('img/item-card.png')")
 							a(href="#").section-list__el-title Обед с домашним пирожком
 						.section-list__el-content

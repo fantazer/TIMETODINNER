@@ -8,6 +8,15 @@ $(document).ready(function(){
   arrows: false,
   responsive: [
     {
+      breakpoint: 1024,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 4
+      }
+    },
+    {
       breakpoint: 768,
       settings: {
         arrows: false,
@@ -17,11 +26,20 @@ $(document).ready(function(){
       }
     },
     {
+      breakpoint: 640,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 2
+      }
+    },
+    {
       breakpoint: 480,
       settings: {
         arrows: false,
         centerMode: true,
-        centerPadding: '40px',
+        centerPadding: '65px',
         slidesToShow: 1
       }
     }
@@ -87,19 +105,18 @@ $(document).ready(function(){
 
 	
 	/* ###### For SlideToggle Elements  ######*/
-	/*var hideToggle = function(targetClick,toggleEl) {
-		$(targetClick).click(function(event){
+
+		$('.header-mobile__toggle-menu').click(function(event){
 				event.stopPropagation();
-				$(toggleEl).slideToggle("fast");
+				$('.header-nav').slideToggle("fast");
 		});
-		$(toggleEl).on("click", function (event) {
+		$('.header-nav').on("click", function (event) {
 			event.stopPropagation();
 		});
 		$(document).on("click", function () {
-				$(toggleEl).hide();
+				$('.header-nav').hide();
 		});
-	}
-	hideToggle('.icon-bars','.top-menu_link');*/
+
 
 })
 
